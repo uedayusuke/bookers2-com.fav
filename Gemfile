@@ -67,4 +67,5 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "sudo"
 gem "jquery-rails"
+gem 'font-awesome-rails'
 
