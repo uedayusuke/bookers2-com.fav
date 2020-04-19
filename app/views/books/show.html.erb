@@ -72,9 +72,20 @@
 									<% end %>
 								</td>
 							<% end %>
+							<td>コメント数：<%= @book.book_comments.count %> </td>
 							</tr>
 					</tbody>
 				</table>
+				<%= form_for [@book, @book_comment] do |f| %>
+					<%= f.text_area :comment %>
+					<%= f.submit "送信", class:"btn btn-lg btn-base-1 pull-right" %>
+				<% end %>
+				<h2>Comments</h2>
+				<tbody>
+					<% @book_comments.each do |book_comments| %>
+						<tr> <%= book_comments.comment %> </tr>
+					<% end %>
+				</tbody>
 			</div>
 		</div>
 	</div>
